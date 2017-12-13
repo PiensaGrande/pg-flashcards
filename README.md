@@ -37,7 +37,7 @@ On our images, cardUpload.php includes a check for admin authority, but that has
 
 We are gratefully using github.com/dabeng/OrgChart Copyright (c) 2016 dabeng to provide navigation of tree, though this may be temporary as it may not visually scale once a large number of collections exist.  
 
-Images have either been created or included based on permissive licensing from public repositories such as pixabay.  Please notify us if there is any question of copyrighted material.
+Images have either been created or included based on permissive licensing from public repositories such as WPClipart, Openclipart, and pixabay.  Please notify us if there is any question of copyrighted material.
 
 ## Future direction / TODO
 
