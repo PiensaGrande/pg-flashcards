@@ -1,5 +1,5 @@
 # pg-flashcards
-RACHEL module to facilitate flashcard based learning.
+RACHEL module to facilitate flashcard based learning.  Slideshow gallery here... http://www.piensagrande.org/blog-single.php?blog=5#Gallery
 
 ## Motivation
 The goals of this RACHEL module are:
