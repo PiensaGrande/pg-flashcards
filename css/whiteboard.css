@@ -1,0 +1,562 @@
+/* ------------------------------- CSS with parts from Rachel ----------------------------------------*/
+
+html {
+    height: 100%; width 100%;
+}
+ 
+body {
+    height: 100%; width 100%;
+    background-color: #ccc;
+    background: url('../images/colorfade4.jpg') no-repeat center center fixed; /*new */
+    background-size: cover; /*new */
+    -webkit-background-size: cover; /*new */
+    -ms-background-size: cover; /*new */
+    -moz-background-size: cover; /*new */
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-size: 100%;
+}
+
+#main { 
+	height: 100%; width: 100%; 
+	margin: 0; padding: 0; 
+}
+
+#rachel {
+    display: block;
+    height: 28px;
+    background: #000 url('../images/rachel-banner-small.png') no-repeat 5px 0;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+#pg-rachel {
+    display: block;
+    height: 28px;
+    background: #000 url('../images/rachel-banner-small.png') no-repeat 5px 0;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+#content { /* from rachel */
+    position: relative;
+    height: 100%; /* <RMS> */
+    width: 960px;
+    margin: 10px auto;
+}
+
+
+
+#footer_right { /* from rachel */
+    float:right; 
+    padding-top:5px;
+    padding-right: 15px;
+    font-size: small;
+    font-weight: bold;
+    color:#ffffff;
+}
+
+
+.menubar {
+    width: 956px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background: rgba(136,115,108,1);
+    padding: 2px; 
+}
+
+.menubar ul {
+    font-size: small;
+    font-weight: bold;
+    list-style-type:none;
+    margin:10;
+    padding:0px;
+    margin: auto;
+}
+
+.menubar li {
+    display:inline;
+    float:left;
+    padding:5px;
+    margin-top: 2px;
+}
+
+.menubar a {
+    color:#fff;
+    margin:10px;
+    text-decoration: none;
+}
+
+.menubar a:hover {
+    color:#ff3;
+    text-decoration: underline;
+}
+
+/* ----------------------------------------------------------------------- */
+
+#container{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#board-container{
+    max-height: 600px;
+    width: auto;
+    z-index: 1;
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    margin-right: -50%;
+}
+
+#board{
+    max-height: 600px;   
+    width: auto;
+    position: absolute;
+    transform: translate(-50%, -40%);
+    -webkit-transform: translate(-50%, -40%);
+    -ms-transform: translate(-50%, -40%);
+    -moz-transform: translate(-50%, -40%);
+    box-shadow: 0 12px 20px -10px rgba(81,64,49,0.6);
+}
+
+#teacher {
+    max-height: 160px;
+    position: absolute;
+    z-index: 2;
+    top: 75%; 
+    left: 5%; 
+    cursor: pointer;
+}
+
+#testMe {
+    max-height: 60px;
+    z-index: 2;
+    position: absolute;
+    top: 12%; /* was -150px when div inside boardcontainer. */
+    left: 3%; /* was -290px; when div inside boardcontainer. */
+}
+
+#testMe:hover { cursor: pointer; }
+
+#check-box {
+    max-height: 60px;
+    z-index: 2;
+    /*these tops and lefts need to be adjusted based on board. */
+    position: absolute;
+    top: -150px;
+    left: -290px;
+}
+
+#numright {
+    position: absolute;
+    white-space: nowrap;
+    z-index: 3;
+    font-size: 2.5em;
+    top: -145px;
+    left: -230px;
+}	
+
+#x-box {
+    max-height: 60px;
+    z-index: 2;
+    /*these tops and lefts need to be adjusted based on board */
+    position: absolute;
+    top: -150px;
+    left: -150px;
+}
+
+#numwrong {
+    position: absolute;
+    white-space: nowrap;
+    z-index: 3;
+    font-size: 2.5em;
+    top: -145px;
+    left: -85px;
+}
+
+#item-image {
+    z-index: 2;
+    position: absolute;
+}
+
+#itemDiv {
+    z-index: 2;
+    white-space: nowrap;
+    position: absolute;
+}
+
+#itemDiv.board-center {
+    max-height: 180px;
+    max-width: 180px;
+    font-size: 2.8em;
+    transform: translate(-90%, -10%);
+    -ms-transform: translate(-90%, -10%);
+    -webkit-transform: translate(-90%, -10%);
+    -moz-transform: translate(-90%, -10%);
+    text-align: center;
+}
+
+#itemDiv.board-left {
+    max-height: 130px;
+    max-width: 130px;
+    font-size: 2em;
+    transform: translate(-200%, -10%);
+    -webkit-transform: translate(-200%, -10%);
+    -ms-transform: translate(-200%, -10%);
+    -moz-transform: translate(-200%, -10%);
+}
+
+#itemDiv svg {
+    display: block;
+    margin-left: auto!important;
+}
+
+#itemDiv img {
+    display: block;
+    margin-left: auto!important;
+}
+
+#itemDiv.board-center > p{
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    height: 300px;
+    transform: translate(-20%, -40%);
+    -ms-transform: translate(-20%, -40%);
+    -webkit-transform: translate(-20%, -40%);
+    -moz-transform: translate(-20%, -40%);
+}
+
+#itemDiv.board-center > img{
+    height: 180px;  /* change from max-height and max-width produces scaling, but allows better positioning of p elements above */
+    width: 180px;
+    transform: translate(35%, -25%);
+    -ms-transform: translate(35%, -25%);
+    -webkit-transform: translate(35%, -25%);
+    -moz-transform: translate(35%, -25%);
+}
+
+#itemDiv.board-center > img + p{
+    display: block;
+    font-size: 2.5vw;
+    height: 40px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    transform: translate(-20%, -330px);
+    -ms-transform: translate(-20%, -330px);
+    -webkit-transform: translate(-20%, -330px);
+    -moz-transform: translate(-20%, -330px);
+}
+
+#itemDiv.board-center > svg + p{
+    display: block;
+    font-size: 2.5vw;
+    height: 40px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    transform: translate(-20%, -200px);
+    -ms-transform: translate(-20%, -200px);
+    -webkit-transform: translate(-20%, -200px);
+    -moz-transform: translate(-20%, -200px);
+}
+
+#itemDiv.board-left > img{
+    height: 130px;
+    width: 130px;
+    transform: translate(20%, -10%); /* was -200%, -10% */
+    -webkit-transform: translate(20%, -10%);
+    -ms-transform: translate(20%, -10%);
+    -moz-transform: translate(20%, -10%);
+}
+
+#itemDiv.board-left > p{
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    font-size: 1.8vw;
+    width: 280px;
+    height: 300px;
+    overflow-y: auto;
+    text-align: center;
+    transform: translate(-16%, -40%);  /* was -16%,-100px */
+    -ms-transform: translate(-16%, -40%);
+    -webkit-transform: translate(-16%, -40%);
+    -moz-transform: translate(-16%, -40%);
+}
+
+#itemDiv.board-left > img + p{
+    font-size: 1.8vw;
+    white-space: nowrap;
+    width: 600px;
+    height: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    transform: translate(-7%, -220px);
+    -ms-transform: translate(-7%, -220px);
+    -webkit-transform: translate(-7%, -220px);
+    -moz-transform: translate(-7%, -220px);
+}
+
+#itemDiv.board-left > svg + p{
+    font-size: 1.8vw;
+    white-space: nowrap;
+    width: 600px;
+    height: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    transform: translate(-7%, -150px);
+    -ms-transform: translate(-7%, -150px);
+    -webkit-transform: translate(-7%, -150px);
+    -moz-transform: translate(-7%, -150px);
+}
+
+#itemDiv > p {
+    font-size: 2.5vw;
+    width: 500px;
+    height: 200px;
+    overflow-y: auto;
+    white-space: normal;
+/*    background-color: lightyellow; */
+    transform: translate(-15%, -10%);
+    -webkit-transform: translate(-15%, -10%);
+    -ms-transform: translate(-15%, -10%);
+    -moz-transform: translate(-15%, -10%);
+}
+
+#item-image.board-center {
+    max-height: 180px;
+    max-width: 180px;
+    transform: translate(-45%, -25%);
+    -ms-transform: translate(-45%, -25%);
+    -webkit-transform: translate(-45%, -25%);
+    -moz-transform: translate(-45%, -25%);
+}
+
+#item-image.board-left {
+    max-height: 130px;
+    max-width: 130px;
+    transform: translate(-200%, -10%);
+    -webkit-transform: translate(-200%, -10%);
+    -ms-transform: translate(-200%, -10%);
+    -moz-transform: translate(-200%, -10%);
+}
+
+#percent-correct {
+    position: absolute;
+    width: 300px;
+    z-index: 3;
+    font-size: 3.5em;
+    transform: translate(25%,-130%);
+    -webkit-transform: translate(25%,-130%);
+    -ms-transform: translate(25%,-130%);
+    -moz-transform: translate(25%,-130%);
+}
+
+#test-options {
+    position: absolute;
+    width: 350px;  /* was 300px */
+    z-index: 3;
+    font-size: 2.5vw;  /* was 2em */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    transform: translate(-10%,-90%);  /* was -15%, -80% */
+    -webkit-transform: translate(-10%,-90%);
+    -ms-transform: translate(-10%,-90%);
+    -moz-transform: translate(-10%,-90%);
+    opacity: 0.9;
+    color: gray;
+}
+
+#test-options li:hover {
+    color: black;
+    opacity: 1.0;
+    cursor: pointer;
+} 
+
+#item-name {
+    position: absolute;
+    white-space: nowrap;
+    z-index: 3;
+    font-size: 2.5vw;
+    width: 500px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    text-align: center;
+    background-color: #e1f1fc;
+    transform: translate(-50%, 30px);  /* was -60%,30px */
+    -webkit-transform: translate(-50%, 30px); 
+    -ms-transform: translate(-50%, 30px); 
+    -moz-transform: translate(-50%, 30px); 
+    visible: none;
+}
+
+#next {
+    position: absolute; 
+    z-index: 2;
+    font-size: 2.5em;
+    transform: translate(240px, 70px); 
+    -webkit-transform: translate(240px, 70px); 
+    -ms-transform: translate(240px, 70px); 
+    -moz-transform: translate(240px, 70px); 
+    cursor: pointer;
+    max-height: 50px;
+    opacity: .5;
+}
+
+#next:hover {
+    opacity: 0.9;
+}
+
+p.big {
+    line-height: 200%;
+    padding: 10px;
+}
+p.small {
+    line-height: 80%;
+    padding: 5px;
+}
+
+.anchorasabutton {
+    appearance: button;
+    -moz-appearance: button;
+    -webkit-appearance: button;
+    text-decoration: none; 
+    font: menu; 
+    color: ButtonText;
+    display: inline-block; 
+    padding: 10px 20px;
+    margin: 0 4px 0 0 ;
+    z-index: 10;
+}
+
+.anchorbuttons a:hover {
+    color:#333;
+    text-decoration: underline;
+}
+
+
+.Subdir0 { 
+    border: 2px; 
+    background-color: rgb(125,154,175);
+    margin: 0 4px 0 0;
+    padding: 0 1em;
+    position: relative;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px
+}
+.Subdir1 {
+    border: 2px;  
+    background-color: #7D2222;
+    margin: 0 4px 0 0;
+    padding: 0 1em;
+    position: relative;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px
+}
+.Subdir2 {
+    border: 2px;  
+    background-color: #FFEEFF;
+    margin: 0 4px 0 0;
+    padding: 0 1em;
+    position: relative;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px
+}
+
+.Subdir3 {
+    border: 2px;
+    background-color: rgb(125,154,175);
+    margin: 0 4px 0 0;
+    padding: 0 1em;
+    position: relative;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px
+}
+.Subdir4 {
+    border: 2px;
+    background-color: #7D2222;
+    margin: 0 4px 0 0;
+    padding: 0 1em;
+    position: relative;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px
+}
+.Subdir5 {
+    border: 2px;
+    background-color: #FFEEFF;
+    margin: 0 4px 0 0;
+    padding: 0 1em;
+    position: relative;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px
+}
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 1em 1em 0 1em;
+  width: auto;
+  max-width: 720px;
+  margin: 20px auto;
+  max-height: 800px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.form-long {
+  width: 80%;
+  float: right;
+}
+
+.form-short {
+   float: right;
+}
+
+.form-left {
+  width: 100%;
+  float: left;
+  font-size: 1em;
+  margin: 3px;
+}
+
+#collection-info {
+  width: 70%;
+}
+
+#questionCard  fieldset {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+#question-info {
+  height: 400px;
+}
+
+.errors {
+  text-color:red;
+}
+
+.formButton {
+  margin: 20px;
+  padding: 20px;
+}

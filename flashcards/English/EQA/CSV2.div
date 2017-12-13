@@ -1,0 +1,1 @@
+<p> How old are you?</p> <script>setOptions(' I am 10 years old.',' He is fine.',' It is cold.',' I am well.');</script>

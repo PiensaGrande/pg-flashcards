@@ -1,0 +1,2 @@
+<p> In n / d, what is n?</p>
+<script>setOptions(' numerator',' numeral',' number',' denominator');</script>
